@@ -360,13 +360,53 @@
 
   async function save(){
     if(!isConfigured){
-      console.warn('Firebase não configurado — a tarefa não foi salva de forma compartilhada.');
+      console.warn // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC4XtfsiobZEuFRjnUAxjEay7zr8D-7Mgo",
+  authDomain: "spider-62c82.firebaseapp.com",
+  projectId: "spider-62c82",
+  storageBucket: "spider-62c82.firebasestorage.app",
+  messagingSenderId: "460369241587",
+  appId: "1:460369241587:web:489ae743db8808c9a3de86",
+  measurementId: "G-0XGPYWW002"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);;
       return;
     }
     try {
       await dbRef.set(tasksToObject());
     } catch(e) {
-      console.warn('Não foi possível salvar o mural no Firebase:', e);
+      console.warn(// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC4XtfsiobZEuFRjnUAxjEay7zr8D-7Mgo",
+  authDomain: "spider-62c82.firebaseapp.com",
+  projectId: "spider-62c82",
+  storageBucket: "spider-62c82.firebasestorage.app",
+  messagingSenderId: "460369241587",
+  appId: "1:460369241587:web:489ae743db8808c9a3de86",
+  measurementId: "G-0XGPYWW002"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app); e);
     }
   }
 
@@ -382,7 +422,7 @@
       tasks = Object.values(data);
       render();
     }, (error) => {
-      console.warn('Erro ao ler o mural do Firebase:', error);
+      console.warn;
     });
   }
 
@@ -425,4 +465,4 @@
 </script>
 
 </body>
-</html>
+</html> 
